@@ -19,9 +19,20 @@ void print_times_table(int n)
 			if (i == 0 || j == 0)
 			{
 				if (j == n)
-					printf("%3d", 0);
+				{
+					_putchar(' ');
+					_putchar(' ');
+					_putchar(' ');
+					_putchar('0');
+				}
 				else
-					printf("%3d, ", 0);
+				{
+					if (i == 0)
+					{
+						_putchar('0');
+						_putchar(',');
+					}
+				}
 			}
 			else
 			{
@@ -31,7 +42,7 @@ void print_times_table(int n)
 				else
 					printf("%3d, ", x);
 			}
-			}
-		printf("\n");
 		}
+		printf("\n");
+	}
 }
