@@ -13,6 +13,6 @@ int main(void)
 		if ((i % 3 == 0) || (i % 5 == 0))
 			sum += i;
 	}
-	printf("the sum of natural number of %d is %d\n", n, sum);
+	printf("%d\n", sum);
 	return (0);
 }
