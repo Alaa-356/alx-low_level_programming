@@ -1,14 +1,13 @@
 #include "main.h"
 /**
- * print_times_table - is the program name
- * Decription: If n is greater than 15 or less than 0
- *             the function should not print anything
- * @n: the vriable to be checked
- * Return: is void
+ * print_times_table - the program name
+ * Description: program to make table using _putchar
+ * @n: the entered variable
+ * Resturn: void
  */
 void print_times_table(int n)
 {
-	int i, j, x;
+	int i, j, res;
 
 	if (n > 15 || n < 0)
 		return;
@@ -16,36 +15,35 @@ void print_times_table(int n)
 	{
 		for (j = 0; j <= n; j++)
 		{
-			if (i == 0 || j == 0)
+			res = i * j;
+			if (j == 0)
+				_putchar('0');
+			if (j != 0)
 			{
-				if (j == n)
+				_putchar(',');
+				if (res < 10)
 				{
 					_putchar(' ');
 					_putchar(' ');
 					_putchar(' ');
-					_putchar('0');
+					_putchar(res + '0');
+				}
+				else if (res < 100)
+				{
+					_putchar(' ');
+					_putchar(' ');
+					_putchar((res / 10) + '0');
+					_putchar((res % 10) + '0');
 				}
 				else
 				{
-					if (i == 0 && j ==0)
-					{
-						_putchar('0');
-						_putchar(',');
-						_putchar(' ');
-						_putchar(' ');
-						_putchar(' ');
-					}
+					_putchar(' ');
+					_putchar((res / 100) + '0');
+					_putchar((res / 10) % 10 + '0');
+					_putchar(res % 10 + '0');
 				}
-			}
-			else
-			{
-				x = i * j;
-				if (j == n)
-					printf("%3d", x);
-				else
-					printf("%3d, ", x);
 			}
 		}
-		printf("\n");
+		_putchar('\n');
 	}
 }
