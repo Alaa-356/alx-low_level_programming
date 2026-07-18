@@ -1,9 +1,10 @@
 #include <stdio.h>
 #include "main.h"
 /**
- * main - Entry point
+ * positive_or_negative - Entry point
  * Description: this program to show postive and negative
- * Return: return 0
+ * @n: is variable
+ * Return: void
  */
 void positive_or_negative(int n)
 {
