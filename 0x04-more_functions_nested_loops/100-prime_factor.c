@@ -4,7 +4,7 @@
  * Description: prime
  * Return: void
  */
-int main(void)
+void main(void)
 {
 	unsigned long n = 612852475143, i;
 
