@@ -4,7 +4,7 @@
  * Description: prime
  * Return: void
  */
-void main(void)
+int main(void)
 {
 	unsigned long n = 612852475143, i;
 
@@ -17,4 +17,5 @@ void main(void)
 	if (n > 1)
 		printf("%lu", n);
 	printf("\n");
+	return (0);
 }
